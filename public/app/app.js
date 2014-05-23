@@ -18,7 +18,7 @@ angular.module('app').config(function($routeProvider, $locationProvider) {
     //.when('/', { templateUrl: '/partials/main/main', controller: 'mvMainCtrl' })
     $routeProvider
         
-        .when('/', { templateUrl: '/partials/tfstogo/main', controller: 'mvMainCtrl' })
+        .when('/', { templateUrl: '/partials/tfstogo/buildsMain', controller: 'mvBuildsMainCtrl' })
         .when('/admin/users', {
             templateUrl: '/partials/admin/user-list',
             controller: 'mvUserListCtrl',

@@ -6,31 +6,36 @@ describe('buildsControllerApp', function() {
     beforeEach(module('app'));
 
     var scope, q;
-    var mvBuildsMainCtrl;
-
+    var mvBuild;
+    var blds;
 
    
     //Initialize the controller and a mock scope
-    beforeEach(inject(function($controller, $rootScope, $q, _mvBuild_) {
+    beforeEach(inject(function($controller, $rootScope, $q) {
         q = $q;
         scope = $rootScope.$new();
-        mvBuildsMainCtrl = _mvBuild_;
+      
     }));
     
 
-
-    it( 'should request latest build', function () {
-        var spy = sinon.spy( mvBuildsMainCtrl, "getLastBuild" );
-        scope.init();
-        // spyOn(buidService, "getLastBuild").andCallThrough();  
-        expect( spy.calledOnce ).to.be.true;
-
-
-    });
-
-    it( 'can get latest build', inject( function ( $rootScope ) {
-        scope.init();
+    it( 'builds is defined', inject( function ( $rootScope ) {
+      //  scope.init();
         $rootScope.$apply();
         expect(scope.builds)["defined"];
     }) );
+
+    beforeEach(inject(function(_mvBuild_) {
+        mvBuild =   _mvBuild_;
+        blds = mvBuild.getAllBuilds();
+    }));
+
+     it('get build',  function (mvBuild) {
+       // scope.init();
+       // scope.$apply();
+         
+         expect(blds);
+
+    });
+
+  
 });

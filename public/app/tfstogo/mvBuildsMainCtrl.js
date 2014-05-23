@@ -1,7 +1,6 @@
-﻿angular.module('app').controller('mvBuildsMainCtrl', function($scope) {
-        
+﻿angular.module('app').controller('mvBuildsMainCtrl', function($scope,mvBuild ) {
+   
     $scope.init = function() {
-      //  this.builds = mvBuild.getAllBuilds();
-      //  mvBuild.getLastBuild();
+       this.builds = mvBuild.getAllBuilds();
     };
 });
