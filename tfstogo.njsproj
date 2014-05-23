@@ -17,13 +17,15 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
+    <Compile Include="public\app\tfstogo\mvBuild.js" />
     <Compile Include="test\tests\tfsbuild\mainSpec.js" />
     <Content Include="logs.txt" />
+    <Content Include="public\app\tfstogo\buildsMain.jade" />
     <Content Include="readme.txt" />
     <Content Include="bower.json" />
     <Content Include="package.json" />
     <Compile Include="karma.conf.js" />
-    <Compile Include="public\app\tfstogo\main.js" />
+    <Compile Include="public\app\tfstogo\mvBuildsMainCtrl.js" />
     <Compile Include="server.js" />
     <Content Include="public\favicon.ico" />
     <Compile Include="test\test-app.js" />

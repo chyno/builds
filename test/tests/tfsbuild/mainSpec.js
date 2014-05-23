@@ -5,45 +5,32 @@ describe('buildsControllerApp', function() {
     //load the controller's module
     beforeEach(module('app'));
 
-    var MainCtrl, scope;
-    var buidService;
+    var scope, q;
+    var mvBuildsMainCtrl;
 
-    var deferred;
-    var q;
 
-    //data
-    var build;
-
-    beforeEach(function() {
-        build = { "buildName ": "Develoipment TFS to GO", "Success": true, "timeFinished": "11\/29\/2014 04:09:31" };
-
-        buidService = {
-            getLastBuild: function() {
-                deferred = q.defer();
-                return deferred.promise;
-            }
-        };
-    })
+   
     //Initialize the controller and a mock scope
-    beforeEach(inject(function($controller, $rootScope, $q) {
+    beforeEach(inject(function($controller, $rootScope, $q, _mvBuild_) {
         q = $q;
         scope = $rootScope.$new();
-        MainCtrl = $controller('MainCtrl', {
-            $scope: scope,
-            buildService: buidService
-        });
+        mvBuildsMainCtrl = _mvBuild_;
     }));
+    
 
-    it('should attach a list of awesomThings to the scope', function() {
-        expect(scope.awesomeThings.length).equals(3);
-    });
 
-    it('should request latest build', function() {
-        var spy = sinon.spy(buidService, "getLastBuild");
+    it( 'should request latest build', function () {
+        var spy = sinon.spy( mvBuildsMainCtrl, "getLastBuild" );
         scope.init();
-       // spyOn(buidService, "getLastBuild").andCallThrough();  
-        expect(spy.calledOnce).to.be.true;
+        // spyOn(buidService, "getLastBuild").andCallThrough();  
+        expect( spy.calledOnce ).to.be.true;
 
 
     });
+
+    it( 'can get latest build', inject( function ( $rootScope ) {
+        scope.init();
+        $rootScope.$apply();
+        expect(scope.builds)["defined"];
+    }) );
 });
