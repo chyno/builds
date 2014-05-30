@@ -18,10 +18,12 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
     <Compile Include="public\app\tfstogo\mvBuild.js" />
+    <Compile Include="public\app\tfstogo\mvBuildDetailCtrl.js" />
     <Compile Include="public\app\tfstogo\mvBuildDetails.js" />
     <Compile Include="server\controllers\builds.js" />
     <Compile Include="test\tests\tfsbuild\mainSpec.js" />
     <Content Include="logs.txt" />
+    <Content Include="public\app\tfstogo\build-details.jade" />
     <Content Include="public\app\tfstogo\buildsMain.jade" />
     <Content Include="public\app\tfstogo\project-builds.jade" />
     <Content Include="readme.txt" />
