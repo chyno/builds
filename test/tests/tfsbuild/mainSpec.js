@@ -7,7 +7,7 @@ describe('buildsControllerApp', function() {
 
     var scope, q;
     var mvBuild;
-    var blds;
+    var blds, bld;
 
    
     //Initialize the controller and a mock scope
@@ -16,7 +16,11 @@ describe('buildsControllerApp', function() {
         scope = $rootScope.$new();
       
     }));
-    
+     beforeEach(inject(function(_mvBuild_) {
+        mvBuild =   _mvBuild_;
+         blds = mvBuild.getAllBuilds();
+         bld = mvBuild.GetBuildDetail(1);
+     }));
 
     it( 'builds is defined', inject( function ( $rootScope ) {
       //  scope.init();
@@ -24,16 +28,22 @@ describe('buildsControllerApp', function() {
         expect(scope.builds)["defined"];
     }) );
 
-    beforeEach(inject(function(_mvBuild_) {
-        mvBuild =   _mvBuild_;
-        blds = mvBuild.getAllBuilds();
-    }));
+   
 
-     it('get build',  function (mvBuild) {
+     it('get correct build count',  function (done) {
        // scope.init();
        // scope.$apply();
-         
-         expect(blds);
+         done();
+         expect(blds.count).equal(2);
+
+    });
+
+      it('get biuld details',  function (done) {
+       // scope.init();
+       // scope.$apply();
+         done();
+        
+         expect(blds.count).equal(2);
 
     });
 

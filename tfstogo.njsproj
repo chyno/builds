@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{37632f02-bb44-4634-a47f-9d9bca6e9c88}</ProjectGuid>
     <ProjectHome />
-    <ProjectView>ProjectFiles</ProjectView>
+    <ProjectView>ShowAllFiles</ProjectView>
     <StartupFile>server.js</StartupFile>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
@@ -18,6 +18,8 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
     <Compile Include="public\app\tfstogo\mvBuild.js" />
+    <Compile Include="public\app\tfstogo\mvBuildDetails.js" />
+    <Compile Include="server\controllers\builds.js" />
     <Compile Include="test\tests\tfsbuild\mainSpec.js" />
     <Content Include="logs.txt" />
     <Content Include="public\app\tfstogo\buildsMain.jade" />

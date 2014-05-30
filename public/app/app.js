@@ -19,6 +19,11 @@ angular.module('app').config(function($routeProvider, $locationProvider) {
     $routeProvider
         
         .when('/', { templateUrl: '/partials/tfstogo/buildsMain', controller: 'mvBuildsMainCtrl' })
+        .when('/builds/:id', {
+            templateUrl: '/partials/tfstogo/course-details',
+            controller: 'mvCourseDetailCtrl'
+        })
+
         .when('/admin/users', {
             templateUrl: '/partials/admin/user-list',
             controller: 'mvUserListCtrl',

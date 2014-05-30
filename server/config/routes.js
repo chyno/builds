@@ -1,10 +1,12 @@
 var auth = require('./auth'),
   users = require('../controllers/users'),
+  builds = require('../controllers/builds'),
   courses = require('../controllers/courses'),
   mongoose = require('mongoose'),
   User = mongoose.model('User');
 
 module.exports = function(app) {
+ 
 
   app.get('/api/users', auth.requiresRole('admin'), users.getUsers);
   app.post('/api/users', users.createUser);
@@ -12,6 +14,9 @@ module.exports = function(app) {
 
   app.get('/api/courses', courses.getCourses);
   app.get('/api/courses/:id', courses.getCourseById);
+
+  app.get('/api/builds', builds.getBuilds);
+  app.get('/api/builds/:id', builds.getBuildsById);
 
   app.get('/partials/*', function(req, res) {
     res.render('../../public/app/' + req.params);
