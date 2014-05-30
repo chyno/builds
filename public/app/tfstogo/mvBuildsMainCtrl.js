@@ -1,6 +1,6 @@
 ﻿angular.module('app').controller('mvBuildsMainCtrl', function($scope,mvBuild ) {
 
-    var blds = mvBuild.getAllBuilds();
+    var blds = mvBuild;
      $scope.builds = blds;
     
 

@@ -19,7 +19,6 @@
   <ItemGroup>
     <Compile Include="public\app\tfstogo\mvBuild.js" />
     <Compile Include="public\app\tfstogo\mvBuildDetailCtrl.js" />
-    <Compile Include="public\app\tfstogo\mvBuildDetails.js" />
     <Compile Include="server\controllers\builds.js" />
     <Compile Include="test\tests\tfsbuild\mainSpec.js" />
     <Content Include="logs.txt" />
