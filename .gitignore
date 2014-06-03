@@ -5,11 +5,7 @@
 #################
 migrate.exe
 ## Generated files
-Source/DMS/Dms.Web.Faa/Errors/
-Source/DMS/Dms.Web.Designee/Errors/
-Source/DMS/Dms.Web.Faa/Logs/
-Source/DMS/Dms.Web.Designee/Logs/
-
+*.dll
 ConnectionStrings.config
 AppSettings.config
 Web.config
