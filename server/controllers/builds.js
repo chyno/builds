@@ -5,7 +5,8 @@ var edge = require('edge');
 
 
 exports.getBuilds = function(req, res) {
-    var data = [];
+    var data = { pageNumber: 2, pageSize: 3 };
+
 
     var tfsBuilds = require('edge').func({
         assemblyFile: 'TFSBuildsConnector.dll',
