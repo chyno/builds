@@ -1,10 +1,25 @@
-﻿.container
+﻿
+.container
   h1 {{build.name}}
-  .row
-  
-    .col-md-6
-      .panel.panel-primary
-        .panel-heading Description
-        .panel-body
-          div  {{build.buildDefinition}}
-       a(href="/") Back To Builds
+  table.table
+    tr
+    
+      td  Label Name 
+      td {{ build.labelName }}
+    tr
+      td Requested By
+      td {{build.requestedBy}}
+    tr
+     td Finished TIme
+     td 
+    tr
+      td Drop Location
+      td {{build.dropLocation}}
+    tr
+      td Build Success
+      td true
+  a(href="/").col-md-offset-1 Back To Builds
+
+
+
+       
