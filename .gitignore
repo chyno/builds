@@ -9,7 +9,8 @@ ConnectionStrings.config
 AppSettings.config
 Web.config
 *.log
-
+BuildsConnector/bin
+TFSBuildsConnector/obj
 ## Ignore personal configuration files
 
 ## Database publishing files
