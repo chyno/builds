@@ -7,7 +7,6 @@ migrate.exe
 ## Generated files
 ConnectionStrings.config
 AppSettings.config
-Web.config
 *.log
 BuildsConnector/bin
 TFSBuildsConnector/obj
