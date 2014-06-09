@@ -90,6 +90,8 @@
     <Compile Include="test\tests\account\mvIdentitySpec.js" />
     <Compile Include="test\tests\account\mvAuthSpec.js" />
     <Compile Include="test\tests\account\mvUserSpec.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="public" />
