@@ -5,11 +5,11 @@ module.exports = {
   development: {
     db: 'mongodb://localhost/multivision',
     rootPath: rootPath,
-    port: process.env.PORT || 3030
+    port: process.env.PORT || 1337
   },
   production: {
     rootPath: rootPath,
     db: 'mongodb://jeames:multivision@ds053178.mongolab.com:53178/multivision',
-    port: process.env.PORT || 80
+    port: process.env.PORT || 1337
   }
 }
