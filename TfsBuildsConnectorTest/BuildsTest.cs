@@ -24,5 +24,23 @@ namespace TfsBuildsConnectorTest
 
 
         }
+
+         [TestMethod]
+        public void CanQueBuild()
+        {
+            /* 
+              queue.projectName = "Helo WOrld Project";
+         queue.buildDefinition = "HelloWorld";
+             * */
+            //Arrange
+            var tfsBuild = new Startup();
+
+            //Act
+            Task<object> bldsTask = tfsBuild.InvokeQueueBuild(new string[] { "Helo WOrld Project", "HelloWorld" });
+            var result = bldsTask.Result;
+
+            //Assert
+            Assert.IsNotNull(result);
+        }
     }
 }

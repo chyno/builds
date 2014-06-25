@@ -13,6 +13,7 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
     <Name>tfstogo</Name>
+    <NameOfLastUsedPublishProfile>tfstogo</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
@@ -37,44 +38,13 @@
     <Content Include="public\css\bootstrap.css" />
     <Content Include="public\css\site.css" />
     <Content Include="public\css\site.styl" />
-    <Content Include="public\app\account\navbar-login.html" />
-    <Content Include="public\app\account\profile.html" />
-    <Content Include="public\app\account\signup.html" />
-    <Content Include="public\app\account\navbar-login.jade" />
-    <Content Include="public\app\account\profile.jade" />
-    <Content Include="public\app\account\signup.jade" />
-    <Compile Include="public\app\account\mvAuth.js" />
-    <Compile Include="public\app\account\mvIdentity.js" />
-    <Compile Include="public\app\account\mvNavBarLoginCtrl.js" />
-    <Compile Include="public\app\account\mvProfileCtrl.js" />
-    <Compile Include="public\app\account\mvSignupCtrl.js" />
-    <Compile Include="public\app\account\mvUser.js" />
-    <Content Include="public\app\admin\user-list.html" />
-    <Content Include="public\app\admin\user-list.jade" />
-    <Compile Include="public\app\admin\mvUserListCtrl.js" />
     <Compile Include="public\app\common\mvNotifier.js" />
-    <Content Include="public\app\courses\course-details.html" />
-    <Content Include="public\app\courses\course-list.html" />
-    <Content Include="public\app\courses\course-details.jade" />
-    <Content Include="public\app\courses\course-list.jade" />
-    <Compile Include="public\app\courses\mvCachedCourses.js" />
-    <Compile Include="public\app\courses\mvCourse.js" />
-    <Compile Include="public\app\courses\mvCourseDetailCtrl.js" />
-    <Compile Include="public\app\courses\mvCourseListCtrl.js" />
-    <Content Include="public\app\main\featured-courses.html" />
-    <Content Include="public\app\main\main.html" />
-    <Content Include="public\app\main\new-courses.html" />
-    <Content Include="public\app\main\featured-courses.jade" />
-    <Content Include="public\app\main\main.jade" />
-    <Content Include="public\app\main\new-courses.jade" />
-    <Compile Include="public\app\main\mvMainCtrl.js" />
     <Compile Include="server\config\auth.js" />
     <Compile Include="server\config\config.js" />
     <Compile Include="server\config\express.js" />
     <Compile Include="server\config\mongoose.js" />
     <Compile Include="server\config\passport.js" />
     <Compile Include="server\config\routes.js" />
-    <Compile Include="server\controllers\courses.js" />
     <Compile Include="server\controllers\users.js" />
     <Content Include="server\includes\currentUser.html" />
     <Content Include="server\includes\layout.html" />
@@ -90,17 +60,12 @@
     <Compile Include="test\tests\account\mvIdentitySpec.js" />
     <Compile Include="test\tests\account\mvAuthSpec.js" />
     <Compile Include="test\tests\account\mvUserSpec.js" />
-    <Content Include="Web.config" />
-    <Content Include="Web.Debug.config" />
+    <None Include="tfstogo.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="public" />
     <Folder Include="public\app" />
-    <Folder Include="public\app\account" />
-    <Folder Include="public\app\admin" />
     <Folder Include="public\app\common" />
-    <Folder Include="public\app\courses" />
-    <Folder Include="public\app\main" />
     <Folder Include="public\css" />
     <Folder Include="public\app\tfstogo\" />
     <Folder Include="server" />
